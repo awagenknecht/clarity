@@ -1,5 +1,3 @@
-# Zenodo download path: path to the zenodo download folder.
-# root: root path of the dataset. This path will contain the audio and metadata folders
 path:
   zenodo_download_path: /home/austin/clarity/recipes/cad2/task2/zenodo_download_path
   root: /home/austin/clarity/recipes/cad2/task2/data
@@ -8,12 +6,6 @@ path:
   gain_metadata: ${path.metadata_dir}/gains_meta.json
   music_dir: ${path.root}/audio
   music_metadata: ${path.metadata_dir}/music.train.json
-
 seed_scene_generation: Cad2Task2_2024
 gains_per_track: 4
 listener_per_scene: 2
-
-# hydra config
-hydra:
-  job:
-    chdir: True

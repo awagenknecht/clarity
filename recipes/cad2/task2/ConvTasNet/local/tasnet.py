@@ -72,10 +72,10 @@ class ConvTasNetStereo(nn.Module, PyTorchModelHubMixin):
         B=256,
         H=512,
         P=3,
-        X=8,
+        X=10, # changed from 8 to 10 to fix tensor shape error in separator model
         R=4,
-        C=4,
-        audio_channels=1,
+        C=2, # changed from 4 to 2 to fix tensor shape error in separator model
+        audio_channels=2, # changed from 1 to 2 to fix tensor shape in encoder and decoder (should be stereo)
         samplerate=44100,
         norm_type="gLN",
         causal=False,
